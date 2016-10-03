@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <!-- <form> -->
+      <select class="choice" id="choice">
+        <option value="0">Rock</option>
+        <option value="1">Paper</option>
+        <option value="2">Scissors</option>
+      </select>
+      <!-- <input type="text" id="choice1"> -->
+      <button onclick="decide()">Submit</button>
+    <!-- </form> -->
+    <script>
+      function  decide(){
+        var user_choice = document.getElementById("choice").value;
+        var comp_choice = Math.round(Math.random() * (2 - 0) + 0);
+        var user_choice1 = (user_choice==0)? "Rock": (user_choice==1) ? "Paper" : "Scissors";
+        var comp_choice1 = (comp_choice==0)? "Rock": (comp_choice==1) ? "Paper" : "Scissors";
+        if(user_choice == comp_choice) {
+            alert("The game tied");
+        }
+        else if (user_choice == 0) {
+            if (comp_choice == 1) {
+              alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\n Comp Wins");
+            }
+            else if (comp_choice == 2) {
+            alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\n You Win");
+          }
+        }
+        else if (user_choice == 1) {
+          if (comp_choice == 0) {
+            alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\n You Win");
+          }
+          else if (comp_choice == 2) {
+          alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\nComp Win");
+        }1
+
+        }
+        else if (user_choice == 2) {
+          if (comp_choice == 0) {
+            alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\n Comp Wins");
+          }
+          else if (comp_choice == 1) {
+          alert("You: "+user_choice1+"\n Comp: "+comp_choice1+"\n You Win");
+          }
+        }
+        // var comp_choice =
+      }
+
+    </script>
+
+  </body>
+</html>
