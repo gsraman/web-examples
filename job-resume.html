@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Job Portal Form</title>
+  </head>
+  <body>
+    <form >
+
+                <div class="row">
+                  <label class="col-md-3">Name</label>
+                  <div class="form-group col-md-9">
+                    <input id="name"  placeholder="Jon Doe" required="" type="text">
+
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <label class="col-md-3">Email </label>
+                  <div class="form-group col-md-9">
+                    <input id="user_email" placeholder="johnedoe@example.com" required="" type="email">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-md-3">Phone </label>
+                  <div class="form-group col-md-9">
+                    <input id="phone"  placeholder="Mobile number" required="" type="text">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-md-3">Current Company/College</label>
+                  <div cla_actioss="form-group col-md-9">
+                    <input id="field_current_company_college"  placeholder="Current Company/College" required="" type="text">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-md-3">Work Experience </label>
+                  <div class="form-group col-md-9">
+                    <select id="field_work_experience" required="" >
+                      <option value="">Work Experience</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+
+                      <option value="3">3+</option>
+                    </select>
+                    <!--<div class="form-group col-md-9">
+                      <input type="text" id="field_work_experience" class="form-control style_2" placeholder="Work Experience" required>
+                    </div>-->
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-md-3">Attach a resume</label>
+                  <div class="form-group col-md-9">
+                    <input id="resume" class="form-control style_2" type="file">
+                  </div>
+                </div>
+
+                <br>
+                <br>
+                <button onclick="get_action()">Submit</button>
+
+
+          </div>
+        </form>
+        <script type="text/javascript">
+
+
+          function get_action() {
+              var name = document.getElementById("name").value;
+              var user_email = document.getElementById("user_email").value;
+              var phone = document.getElementById("phone").value;
+              var field_current_company_college = document.getElementById("field_current_company_college").value;
+              var field_work_experience = document.getElementById("field_work_experience").value;
+              var resume = document.getElementById("resume").value;
+              alert("Successfully Registered!\nName: "+name+"\nEmail: "+user_email+"\nPhone: "+phone+"\nCurrent field: "+field_current_company_college+"\nField Work experience: "+field_work_experience+"\nResume: "+resume);
+
+          }
+      </script>
+
+  </body>
+
+</html>
